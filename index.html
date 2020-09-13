@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <title>Sai Santosh Kottakota</title>
+
+  <style>
+    body {
+      background: #EEEEEE;
+      font-family: 'Nunito', calibri;
+      line-height: 1.4;
+      margin: 40px 0;
+    }
+
+    em {
+      color: #999;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 2px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #resume {
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 60px;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 4px #aaa;
+      -webkit-box-shadow: 2px 2px 4px #aaa;
+    }
+
+    #nameBlock {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 3px;
+    }
+
+    .coursesList {
+      width: 28%;
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    .largeFont {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .smallFont {
+      font-size: 12px;
+    }
+
+    .sectionBlock {
+      display: flex;
+      width: 100%;
+    }
+
+    .sectionName {
+      width: 18%;
+      vertical-align: top;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .sectionContent {
+      width: 80%;
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    .sectionContent ul {
+      padding-left: 20px;
+      margin-top: 6px;
+      list-style-type: circle;
+    }
+
+    .sectionContent .title {
+      font-weight: bold;
+    }
+
+    .sectionContent .date {
+      float: right;
+    }
+
+    .sectionContent .separator {
+      height: 14px;
+    }
+
+    .sectionLine {
+      border-style: dashed;
+      border-width: 1px;
+      border-color: #CFCFCF;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .summary {
+      margin-top: 6px;
+    }
+
+    .skills {
+      margin-bottom: 4px;
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    .skillBlock {
+      border: 1px solid #CFCFCF;
+      border-radius: 5px;
+      padding: 3px 7px;
+      margin: 4px;
+      font-size: 14px;
+    }
+
+    .jobBlock {
+      page-break-inside: avoid;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+
+    .jobBlock:not(:last-child) {
+      border-bottom: 1px dashed #CFCFCF;
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 40em) {
+      body {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0.5em 1em;
+        border: none;
+      }
+
+      .sectionContent {
+        width: 100%;
+      }
+
+      .sectionContent .date {
+        padding-right: 2em;
+      }
+
+      .sectionName {
+        width: auto;
+        font-weight: bold;
+      }
+
+      .largeFont {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .smallFont {
+        font-size: 14px;
+      }
+    }
+
+    @media print {
+      #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0px 0px;
+        border: 0px;
+        background: #fff;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+
+      a {
+        color: black;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id='resume'>
+    <div id='nameBlock' class='largeFont'>
+      <span class='name'>
+        Sai Santosh Kottakota
+      </span>
+      <span class='label'>Yet another knowledge craving Software Engineer.</span>
+    </div>
+    <div id='basicsBlock' class='smallFont'>
+      <div class='contactBlock'>
+        <span class='email'>santoshkottakota007@gmail.com</span>
+        <span class='divider'>|</span>
+        <span class='phone'>(+91) 99850 94687</span>
+        <span class='divider'>|</span>
+        <span class='url'>
+          <a href='https://github.io/santosh898'>https://github.io/santosh898</a>
+        </span>
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+
+    <div id='workBlock' class="sectionBlock">
+      <div class='sectionName'>
+        <span>EXPERIENCE</span>
+      </div>
+      <div class='sectionContent'>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Solo Developer
+            </span>
+            <span class='date'>
+              May 2018 &mdash; Sept 2020
+            </span>
+          </div>
+          <div><a href='https://veda.ai'>veda.ai</a></div>
+          <div><b>Veda - Super Learn/Teach anything with friends & AI</b></div>
+          <ul class='highlights'>
+            <li>A classroom that goes beyond teaching and actively encourages visual brainstorming</li>
+            <li>A Classroom that is intelligent to learn from best of classrooms and recommend</li>
+            <li>A classroom that gently reminds you to continue learning if distracted or remind you to take a walk if
+              sleepy</li>
+          </ul>
+
+        </div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Developer at Startup Gurukul
+            </span>
+            <span class='date'>
+              Feb 2018 &mdash; Mar 2018
+            </span>
+          </div>
+          <div><a href='https://www.startupgurukul.in'>www.startupgurukul.in</a></div>
+          <div><b>maata.com(ChatBot)</b></div>
+          <ul class='highlights'>
+            <li>A node.js based chatbot service</li>
+            <li>Intelligence using machine learning</li>
+            <li>Realtime human interaction with users through the same bot.</li>
+          </ul>
+
+        </div>
+
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Developer at Startup Gurukul
+            </span>
+            <span class='date'>
+              Feb 2018 &mdash; Mar 2018
+            </span>
+          </div>
+          <div><a href='https://www.startupgurukul.in'>www.startupgurukul.in</a></div>
+          <div><b>maata.com(ChatBot)</b></div>
+          <ul class='highlights'>
+            <li>A node.js based chatbot service</li>
+            <li>Intelligence using machine learning</li>
+            <li>Realtime human interaction with users through the same bot.</li>
+          </ul>
+
+        </div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Developer at Startup Gurukul
+            </span>
+            <span class='date'>
+              Aug 2017 &mdash; Feb 2018
+            </span>
+          </div>
+          <div><a href='www.startupgurukul.in'>www.startupgurukul.in</a></div>
+          <div><b>Kubera, a blockchain based datastore</b></div>
+          <ul class='highlights'>
+            <li>A framework built on top of ethereum i.e.,a decentralized network</li>
+            <li>Automated smart contracts which makes easier to interact with blockchain</li>
+            <li>Faster, cheaper and reliable decentralized network</li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+    <div id='skills' class="sectionBlock">
+      <div class='sectionName'>
+        <span>SKILLS</span>
+      </div>
+      <div class='sectionContent'>
+        <div class='skills'>
+          <div class='skillBlock'>React</div>
+          <div class='skillBlock'>Redux</div>
+          <div class='skillBlock'>Nodejs</div>
+          <div class='skillBlock'>Express</div>
+          <div class='skillBlock'>Firebase</div>
+          <div class='skillBlock'>Javascript</div>
+          <div class='skillBlock'>Typescript</div>
+          <div class='skillBlock'>Flutter</div>
+          <div class='skillBlock'>Python</div>
+          <div class='skillBlock'>Tensorflow</div>
+          <div class='skillBlock'>C</div>
+          <div class='skillBlock'>Ethereum</div>
+          <div class='skillBlock'>Solidity</div>
+          <div class='skillBlock'>Version control</div>
+          <div class='skillBlock'>Android(Kotlin)</div>
+        </div>
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+
+    <div id='education' class="sectionBlock">
+      <div class='sectionName'>
+        <span>EDUCATION</span>
+      </div>
+      <div class='sectionContent'>
+        <div class='educationBlock'>
+          <span class='title'>
+            RGUKT
+          </span>
+          <span class='date'>
+            2014 &mdash; 2018
+          </span>
+          <div class=''>
+            Bachelor - Computer Science, GPA: 8.35
+          </div>
+        </div>
+        <!-- <div class='separator'></div>
+      <div class='educationBlock'>
+        <span class='title'>
+          RGUKT
+        </span>
+        <span class='date'>
+          2012 &mdash; 2014
+        </span>
+        <div class=''>
+          PUC  - M.P.C, GPA: 8.18
+        </div>
+      </div>
+      <div class='separator'></div>
+      <div class='educationBlock'>
+        <span class='title'>
+          Z.P High School
+        </span>
+        <span class='date'>
+          2011 &mdash; 2012
+        </span>
+        <div class=''>
+          10th Class, GPA: 9.7
+        </div>
+      </div> -->
+      </div>
+    </div>
+    <div class='sectionLine'></div>
+
+    <div id='interests' class="sectionBlock">
+      <div class='sectionName'>
+        <span>HOBBIES</span>
+      </div>
+      <div class='sectionContent'>
+        <span>Travel</span><span>, </span>
+        <span>Food</span><span>, </span>
+        <span>Games</span>
+      </div>
+
+    </div>
+</body>
+
+</html>
