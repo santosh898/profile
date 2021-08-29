@@ -5,7 +5,9 @@
 
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <title>Sai Santosh Kottakota</title>
 
@@ -40,14 +42,33 @@
     #resume {
       margin: 0 auto;
       max-width: 700px;
-      padding: 60px;
+      padding: 40px 60px;
       background: #fff;
       border: 1px solid #ccc;
       box-shadow: 2px 2px 4px #aaa;
       -webkit-box-shadow: 2px 2px 4px #aaa;
     }
 
+    #headerBlock{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font-family: 'Arial', calibri;
+    }
+
     #nameBlock {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blockHeader{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 12px 0px 4px 0px;
+    }
+
+    .contactBlock{
       display: flex;
       flex-direction: column;
     }
@@ -80,19 +101,21 @@
       width: 100%;
     }
 
+    .experienceTitle{
+      color:#545454;
+      font-style: italic;
+    }
+
     .sectionName {
-      width: 100%;
-      margin-bottom: 10px;
+      width: auto;
       vertical-align: top;
       display: inline-block;
       font-weight: bold;
     }
 
     .sectionContent {
-      width: 80%;
-      vertical-align: top;
-      display: inline-block;
-    }
+        width: 100%;
+      }
 
     .sectionContent ul {
       padding-left: 20px;
@@ -154,6 +177,15 @@
       border-bottom: 1px dashed #CFCFCF;
     }
 
+    .jobBlock.projectBlock{
+      border-bottom: none;
+    }
+
+    .educationBlock{
+      display: flex;
+      justify-content: space-between;
+    }
+
     /* Media Queries */
     @media only screen and (max-width: 40em) {
       body {
@@ -168,17 +200,8 @@
         border: none;
       }
 
-      .sectionContent {
-        width: 100%;
-      }
-
       .sectionContent .date {
         padding-right: 2em;
-      }
-
-      .sectionName {
-        width: auto;
-        font-weight: bold;
       }
 
       .largeFont {
@@ -213,23 +236,24 @@
 <body>
 
   <div id='resume'>
+    <div id='headerBlock'>
     <div id='nameBlock' class='largeFont'>
-      <span class='name'>
-        Sai Santosh Kottakota
-      </span>
-      <span class='label'>Yet another knowledge craving Software Engineer.</span>
-    </div>
+          <span class='name'>
+            Sai Santosh Kottakota
+          </span>
+          <span class='label'>Aspiring technical lead</span>
+        </div>
     <div id='basicsBlock' class='smallFont'>
       <div class='contactBlock'>
         <span class='email'>me.sai.santosh@gmail.com</span>
-        <span class='divider'>|</span>
         <span class='phone'>(+91) 99850 94687</span>
-        <span class='divider'>|</span>
         <span class='url'>
           <a href='https://github.com/santosh898' target='_blank'>https://github.com/santosh898</a>
         </span>
       </div>
     </div>
+    </div>
+    
     <div class='sectionLine'></div>
 
 
@@ -243,82 +267,118 @@
             <span class='title'>
               Founding Engineer
             </span>
+            <div><a href='https://www.usesynth.com' target='_blank'>usesynth.com</a></div>
+            <span class='date'>
+              June 2021 &mdash; Present
+            </span>
+          </div>
+          <div class="experienceTitle">Synth - A 1-click note taking application for meetings, podcasts and audio journals</div>
+          <ul class='highlights'>
+            <li><b>Responsible</b> for developing features based on user requests and feedback</li>
+            <li>Built production level electron desktop version of the application, used by <b>200+</b> users</li>
+            <li>Assisted MAC developer in building specific system level features</li>
+          </ul>
+        </div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Technical lead
+            </span>
+            <div><a href='https://www.loqbox.com' target='_blank'>loqbox.com</a></div>
+            <span class='date'>
+              Oct 2020 &mdash; Present
+            </span>
+          </div>
+          <div class="experienceTitle">Loqbox - Build your credit score by saving</div>
+          <ul class='highlights'>
+            <li><b>Responsible</b> for leading the UI team of 5</li>
+            <li>Developed <b>end-to-end</b> product UI for loqbox-save, being used by <b>40000+</b> users</li>
+            <li>Led <b>end-to-end</b> process, ideation, development and delivery, for loqbox-spend, currently in <b>beta</b></li>
+          </ul>
+        </div>
+        <div class="jobBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Founding Engineer
+            </span>
+            <div><a href='https://veda.ai' target='_blank'>veda.ai</a></div>
             <span class='date'>
               May 2018 &mdash; Sept 2020
             </span>
           </div>
-          <div><a href='https://veda.ai' target='_blank'>veda.ai</a></div>
-          <div><b>Veda - Super Learn/Teach anything with friends & AI</b></div>
+          <div class="experienceTitle">Veda - Super Learn/Teach anything with friends & AI</div>
           <ul class='highlights'>
-            <li>A classroom that goes beyond teaching and actively encourages visual brainstorming</li>
-            <li>A Classroom that is intelligent to learn from best of classrooms and recommend</li>
-            <li>A classroom that gently reminds you to continue learning if distracted or remind you to take a walk if
-              sleepy</li>
-          </ul>
-
-        </div>
-        <div class="jobBlock">
-          <div class='blockHeader'>
-            <span class='title'>
-              Developer
-            </span>
-            <span class='date'>
-              Feb 2018 &mdash; Mar 2018
-            </span>
-          </div>
-          <div><a href='https://www.startupgurukul.in' target='_blank'>www.startupgurukul.in</a></div>
-          <div><b>Maata - A Chatbot Service</b></div>
-          <ul class='highlights'>
-            <li>A node.js based chatbot service</li>
-            <li>Intelligence using machine learning</li>
-            <li>Realtime human interaction with users through the same bot.</li>
-          </ul>
-
-        </div>
-        <div class="jobBlock">
-          <div class='blockHeader'>
-            <span class='title'>
-              Developer
-            </span>
-            <span class='date'>
-              Aug 2017 &mdash; Feb 2018
-            </span>
-          </div>
-          <div><a href='https://www.startupgurukul.in' target='_blank'>www.startupgurukul.in</a></div>
-          <div><b>Kubera - a blockchain based datastore</b></div>
-          <ul class='highlights'>
-            <li>A framework built on top of ethereum i.e.,a decentralized network</li>
-            <li>Automated smart contracts which makes easier to interact with blockchain</li>
-            <li>Faster, cheaper and reliable decentralized network</li>
+            <li>Engineered and Maintained <b>end-to-end</b> technology and architecture</li>
+            <li>Responsible for ideation, design and development of various POCs involving cutting-edge technologies like Deep Learning on the edge and WebRTC</li>
+            <li>Designed overall <b>development strategy</b> for web and mobile applications</li>
           </ul>
         </div>
-
-
       </div>
     </div>
     <div class='sectionLine'></div>
 
+    <div class="sectionBlock"> 
+      <div class='sectionName'>
+        <span>PROJECTS</span>
+      </div>
+      <div class="sectionContent">
+        <div class="jobBlock projectBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Helmet detection
+            </span>
+          </div>
+          <ul class='highlights'>
+            <li>Built a deep learning based helmet detection software that can help in traffic safety using SSD Mobilenet V2</li>
+          </ul>
+        </div>
+         <div class="jobBlock projectBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Kubera - a blockchain based datastore
+            </span>
+          </div>
+          <ul class='highlights'>
+            <li>Developed a Blockchain based datastore based on ethereum for noSQL like CRUD operations</li>
+          </ul>
+        </div>
+         <div class="jobBlock projectBlock">
+          <div class='blockHeader'>
+            <span class='title'>
+              Maata - A Chatbot Service
+            </span>
+          </div>
+          <ul class='highlights'>
+            <li>Developed a node.js based chatbot service using ML, for providing details of a website</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class='sectionLine'></div>
+
     <div id='skills' class="sectionBlock">
       <div class='sectionName'>
-        <span>SKILLS</span>
+        <span>TECHNICAL SKILLS</span>
       </div>
       <div class='sectionContent'>
         <div class='skills'>
           <div class='skillBlock'>React</div>
           <div class='skillBlock'>Web Extensions</div>
           <div class='skillBlock'>Redux</div>
-          <div class='skillBlock'>Nodejs</div>
+          <div class='skillBlock'>Typescript</div>
+          <div class='skillBlock'>Javascript</div>
+          <div class='skillBlock'>React Native</div>
+          <div class='skillBlock'>WebRTC</div>
+          <div class='skillBlock'>NodeJS</div>
+          <div class='skillBlock'>Electron</div>
           <div class='skillBlock'>Express</div>
           <div class='skillBlock'>Firebase</div>
-          <div class='skillBlock'>Javascript</div>
-          <div class='skillBlock'>Typescript</div>
+          <div class='skillBlock'>VueJS</div>
           <div class='skillBlock'>Flutter</div>
           <div class='skillBlock'>Python</div>
-          <div class='skillBlock'>Tensorflow</div>
           <div class='skillBlock'>C</div>
           <div class='skillBlock'>Ethereum</div>
-          <div class='skillBlock'>Solidity</div>
-          <div class='skillBlock'>Version control</div>
           <div class='skillBlock'>Android(Kotlin)</div>
         </div>
       </div>
@@ -332,54 +392,19 @@
       </div>
       <div class='sectionContent'>
         <div class='educationBlock'>
-          <span class='title'>
-            RGUKT
-          </span>
+          <div class="educationDetails">
+            <span class='title'>
+              RGUKT
+            </span>
+            <div class=''>
+            Bachelor - Computer Science, GPA: 8.35
+            </div>
+          </div>
           <span class='date'>
             2014 &mdash; 2018
           </span>
-          <div class=''>
-            Bachelor - Computer Science, GPA: 8.35
-          </div>
-        </div>
-        <!-- <div class='separator'></div>
-      <div class='educationBlock'>
-        <span class='title'>
-          RGUKT
-        </span>
-        <span class='date'>
-          2012 &mdash; 2014
-        </span>
-        <div class=''>
-          PUC  - M.P.C, GPA: 8.18
         </div>
       </div>
-      <div class='separator'></div>
-      <div class='educationBlock'>
-        <span class='title'>
-          Z.P High School
-        </span>
-        <span class='date'>
-          2011 &mdash; 2012
-        </span>
-        <div class=''>
-          10th Class, GPA: 9.7
-        </div>
-      </div> -->
-      </div>
-    </div>
-    <div class='sectionLine'></div>
-
-    <div id='interests' class="sectionBlock">
-      <div class='sectionName'>
-        <span>HOBBIES</span>
-      </div>
-      <div class='sectionContent'>
-        <span>Travel</span><span>, </span>
-        <span>Food</span><span>, </span>
-        <span>Games</span>
-      </div>
-
     </div>
 </body>
 
