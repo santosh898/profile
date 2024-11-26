@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  output: "export",
+  reactStrictMode: true,
+  basePath: "/resume",
 };
 
 export default nextConfig;
