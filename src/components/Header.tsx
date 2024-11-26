@@ -11,11 +11,17 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   return (
     <>
-      <header className="mb-12 flex items-center justify-between">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Sai Santosh Kottakota
-        </h1>
-        <nav className="flex space-x-4">
+      <header className="mb-6 flex flex-col sm:flex-row sm:items-start items-center justify-between">
+        <div className="text-center sm:text-left">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-2">
+            Sai Santosh Kottakota
+          </h1>
+          <h2 className="mb-4 text-2xl font-semibold tracking-tight">
+            Tech Lead
+          </h2>
+        </div>
+
+        <nav className="flex space-x-4 mt-4 sm:mt-0">
           <TooltipProvider>
             {[
               {
@@ -62,9 +68,6 @@ const Header = () => {
       </header>
 
       <section className="mb-12">
-        <h2 className="mb-4 text-2xl font-semibold tracking-tight">
-          Tech Lead
-        </h2>
         <p className="max-w-2xl text-gray-300">
           Experienced Tech Lead with expertise in modern web technologies.
           Passionate about creating efficient, scalable, and innovative
