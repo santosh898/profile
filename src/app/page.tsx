@@ -11,7 +11,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 
 export const metadata: Metadata = {
-  title: "Sai Santosh Kottakota - Tech Lead Portfolio",
+  title: "Sai Santosh Kottakota - Tech Lead",
   description:
     "Experienced Tech Lead specializing in React, Node.js, and modern web technologies",
 };
