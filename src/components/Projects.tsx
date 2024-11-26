@@ -59,7 +59,7 @@ const Projects = () => {
                 asChild
                 className="absolute top-2 right-2"
               >
-                <Link href={project.github} target="__newtab">
+                <Link href={project.github} target="_blank">
                   <Github />
                 </Link>
               </Button>
@@ -68,21 +68,21 @@ const Projects = () => {
           <CardFooter>
             {project.demo && (
               <Button asChild variant="secondary">
-                <Link href={project.demo} target="__newtab">
+                <Link href={project.demo} target="_blank">
                   Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             )}
             {project.explainer && (
               <Button asChild variant="secondary">
-                <Link href={project.explainer} target="__newtab">
+                <Link href={project.explainer} target="_blank">
                   Explainer <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             )}
             {project.extension && (
               <Button asChild variant="secondary">
-                <Link href={project.extension} target="__newtab">
+                <Link href={project.extension} target="_blank">
                   Extension <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
