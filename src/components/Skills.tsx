@@ -41,7 +41,7 @@ import LanceDBLogo from "@/logos/lancedb.svg";
 import PhidataLogo from "@/logos/phidata.svg";
 
 const seggregatedSkills = {
-  frontend: [
+  Frontend: [
     { name: "React", logo: ReactLogo },
     { name: "Typescript", logo: TypescriptLogo },
     { name: "Tailwind", logo: TailwindLogo },
@@ -54,7 +54,7 @@ const seggregatedSkills = {
     { name: "Redux", logo: ReduxLogo },
     { name: "Vitest/Jest", logo: VitestLogo },
   ],
-  backend: [
+  Backend: [
     { name: "Node.JS", logo: NodejsLogo },
     { name: "Postgres", logo: PostgresqlLogo },
     { name: "Firebase", logo: FirebaseLogo },
@@ -63,21 +63,13 @@ const seggregatedSkills = {
     { name: "Microservices", logo: MicroservicesLogo },
     { name: "Python", logo: PythonLogo },
   ],
-  misc: [
-    { name: "Electron.JS", logo: ElectronLogo },
-    { name: "Web Extensions", logo: WebextensionsLogo },
-    { name: "WebRTC", logo: WebrtcLogo },
-    { name: "Metamask", logo: MetamaskLogo },
-    { name: "Thingsboard", logo: ThingsboardLogo },
-    { name: "Infura", logo: InfuraLogo },
-  ],
-  web3: [
+  Web3: [
     { name: "Solidity", logo: SolidityLogo },
     { name: "Ethers.JS", logo: EthersLogo },
     { name: "Hardhat", logo: HardhatLogo },
     { name: "Alchemy", logo: AlchemyLogo },
   ],
-  ai: [
+  AI: [
     {
       name: "OpenAI",
       logo: OpenAILogo,
@@ -86,6 +78,14 @@ const seggregatedSkills = {
     { name: "Phidata", logo: PhidataLogo },
     { name: "LanceDB", logo: LanceDBLogo },
     { name: "Tensorflow.JS", logo: TensorflowLogo },
+  ],
+  Misc: [
+    { name: "Electron.JS", logo: ElectronLogo },
+    { name: "Web Extensions", logo: WebextensionsLogo },
+    { name: "WebRTC", logo: WebrtcLogo },
+    { name: "Metamask", logo: MetamaskLogo },
+    { name: "Thingsboard", logo: ThingsboardLogo },
+    { name: "Infura", logo: InfuraLogo },
   ],
 };
 
@@ -98,7 +98,7 @@ function SkillSection({
   onToggle,
 }: {
   title: string;
-  skills: typeof seggregatedSkills.frontend;
+  skills: typeof seggregatedSkills.Frontend;
   expanded: boolean;
   onToggle: () => void;
 }) {
@@ -107,9 +107,7 @@ function SkillSection({
 
   return (
     <div className="flex-1 min-w-[250px]">
-      <h3 className="text-xl font-semibold mb-4 capitalize text-gray-100">
-        {title}
-      </h3>
+      <h3 className="text-xl font-semibold mb-4 text-gray-100">{title}</h3>
       <div className="space-y-2">
         {displayedSkills.map((skill) => (
           <Card
@@ -165,7 +163,7 @@ const Skills = () => {
       {(
         Object.entries(seggregatedSkills) as [
           keyof typeof seggregatedSkills,
-          typeof seggregatedSkills.frontend
+          typeof seggregatedSkills.Frontend
         ][]
       ).map(([category, skills]) => (
         <SkillSection
