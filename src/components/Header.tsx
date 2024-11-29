@@ -69,9 +69,10 @@ const Header = () => {
 
       <section className="mb-12 max-sm:text-center">
         <p className="max-w-2xl text-gray-300">
-          Experienced Tech Lead with expertise in modern web technologies.
-          Passionate about creating efficient, scalable, and innovative
-          solutions for complex problems.
+          Experienced Tech Lead with expertise in modern web technologies, Web3,
+          and AI. Skilled in developing efficient, scalable, and innovative
+          solutions, including advanced Retrieval-Augmented Generation (RAG)
+          systems.
         </p>
         <Button asChild variant="secondary" className="mt-4">
           <Link

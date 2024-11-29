@@ -33,6 +33,12 @@ import AlchemyLogo from "@/logos/alchemy.svg";
 import HardhatLogo from "@/logos/hardhat.svg";
 import InfuraLogo from "@/logos/infura.svg";
 import MetamaskLogo from "@/logos/metamask.svg";
+import TensorflowLogo from "@/logos/tensorflow.svg";
+import PythonLogo from "@/logos/python.svg";
+import OpenAILogo from "@/logos/openai.svg";
+import OllamaLogo from "@/logos/ollama.svg";
+import LanceDBLogo from "@/logos/lancedb.svg";
+import PhidataLogo from "@/logos/phidata.svg";
 
 const seggregatedSkills = {
   frontend: [
@@ -55,6 +61,7 @@ const seggregatedSkills = {
     { name: "Docker", logo: DockerLogo },
     { name: "GraphQL", logo: GraphqlLogo },
     { name: "Microservices", logo: MicroservicesLogo },
+    { name: "Python", logo: PythonLogo },
   ],
   misc: [
     { name: "Electron.JS", logo: ElectronLogo },
@@ -66,9 +73,19 @@ const seggregatedSkills = {
   ],
   web3: [
     { name: "Solidity", logo: SolidityLogo },
-    { name: "Ethers", logo: EthersLogo },
+    { name: "Ethers.JS", logo: EthersLogo },
     { name: "Hardhat", logo: HardhatLogo },
     { name: "Alchemy", logo: AlchemyLogo },
+  ],
+  ai: [
+    {
+      name: "OpenAI",
+      logo: OpenAILogo,
+    },
+    { name: "Ollama", logo: OllamaLogo },
+    { name: "Phidata", logo: PhidataLogo },
+    { name: "LanceDB", logo: LanceDBLogo },
+    { name: "Tensorflow.JS", logo: TensorflowLogo },
   ],
 };
 

@@ -12,8 +12,7 @@ import Projects from "@/components/Projects";
 
 export const metadata: Metadata = {
   title: "Sai Santosh Kottakota - Tech Lead",
-  description:
-    "Experienced Tech Lead specializing in React, Node.js, and modern web technologies",
+  description: "Tech Lead skilled in modern web technologies, Web3, and AI.",
 };
 
 export default function Page() {
