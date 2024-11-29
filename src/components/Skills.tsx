@@ -1,6 +1,10 @@
 "use client";
 
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 import ReactLogo from "@/logos/react.svg";
 import ReactNativeLogo from "@/logos/react-native.svg";
@@ -23,37 +27,48 @@ import WebextensionsLogo from "@/logos/webextensions.svg";
 import WebrtcLogo from "@/logos/webrtc.svg";
 import ThingsboardLogo from "@/logos/thingsboard.svg";
 import DockerLogo from "@/logos/docker.svg";
-import { Button } from "./ui/button";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import SolidityLogo from "@/logos/solidity.svg";
+import EthersLogo from "@/logos/ethers.svg";
+import AlchemyLogo from "@/logos/alchemy.svg";
+import HardhatLogo from "@/logos/hardhat.svg";
+import InfuraLogo from "@/logos/infura.svg";
+import MetamaskLogo from "@/logos/metamask.svg";
 
 const seggregatedSkills = {
   frontend: [
     { name: "React", logo: ReactLogo },
+    { name: "Typescript", logo: TypescriptLogo },
+    { name: "Tailwind", logo: TailwindLogo },
+    { name: "Next.JS", logo: NextjsLogo },
     { name: "React Native", logo: ReactNativeLogo },
     { name: "Javascript", logo: JavascriptLogo },
-    { name: "Typescript", logo: TypescriptLogo },
     { name: "Styled Components", logo: StyledComponentsLogo },
-    { name: "Tailwind", logo: TailwindLogo },
     { name: "Vue.JS", logo: VuejsLogo },
     { name: "Solid.JS", logo: SolidjsLogo },
     { name: "Redux", logo: ReduxLogo },
-    { name: "Next.JS", logo: NextjsLogo },
     { name: "Vitest/Jest", logo: VitestLogo },
   ],
   backend: [
     { name: "Node.JS", logo: NodejsLogo },
     { name: "Postgres", logo: PostgresqlLogo },
-    { name: "GraphQL", logo: GraphqlLogo },
     { name: "Firebase", logo: FirebaseLogo },
-    { name: "Microservices", logo: MicroservicesLogo },
     { name: "Docker", logo: DockerLogo },
+    { name: "GraphQL", logo: GraphqlLogo },
+    { name: "Microservices", logo: MicroservicesLogo },
   ],
   misc: [
     { name: "Electron.JS", logo: ElectronLogo },
     { name: "Web Extensions", logo: WebextensionsLogo },
     { name: "WebRTC", logo: WebrtcLogo },
+    { name: "Metamask", logo: MetamaskLogo },
     { name: "Thingsboard", logo: ThingsboardLogo },
+    { name: "Infura", logo: InfuraLogo },
+  ],
+  web3: [
+    { name: "Solidity", logo: SolidityLogo },
+    { name: "Ethers", logo: EthersLogo },
+    { name: "Hardhat", logo: HardhatLogo },
+    { name: "Alchemy", logo: AlchemyLogo },
   ],
 };
 
@@ -70,21 +85,8 @@ function SkillSection({
   expanded: boolean;
   onToggle: () => void;
 }) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const displayedSkills = !isMobile
-    ? skills
-    : expanded
-    ? skills
-    : skills.slice(0, ITEMS_TO_SHOW);
-  const showToggle = skills.length > ITEMS_TO_SHOW && isMobile;
+  const displayedSkills = expanded ? skills : skills.slice(0, ITEMS_TO_SHOW);
+  const showToggle = skills.length > ITEMS_TO_SHOW;
 
   return (
     <div className="flex-1 min-w-[250px]">

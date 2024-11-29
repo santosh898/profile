@@ -30,6 +30,11 @@ const Header = () => {
                 href: "tel:+919985094687",
               },
               {
+                icon: Mail,
+                label: "Email",
+                href: "mailto:me.sai.santosh@email.com",
+              },
+              {
                 icon: Github,
                 label: "GitHub",
                 href: "https://github.com/santosh898",
@@ -38,11 +43,6 @@ const Header = () => {
                 icon: Linkedin,
                 label: "LinkedIn",
                 href: "https://www.linkedin.com/in/santosh898",
-              },
-              {
-                icon: Mail,
-                label: "Email",
-                href: "mailto:me.sai.santosh@email.com",
               },
             ].map(({ icon: Icon, label, href }) => (
               <Tooltip key={label}>
@@ -67,7 +67,7 @@ const Header = () => {
         </nav>
       </header>
 
-      <section className="mb-12">
+      <section className="mb-12 max-sm:text-center">
         <p className="max-w-2xl text-gray-300">
           Experienced Tech Lead with expertise in modern web technologies.
           Passionate about creating efficient, scalable, and innovative
