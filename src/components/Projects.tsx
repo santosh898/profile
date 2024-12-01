@@ -3,54 +3,72 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { ArrowRight, Github } from "lucide-react";
 
+const projects = [
+  {
+    title: "Git Ranker",
+    description:
+      "An LLM Based tool to rates and provides issues on your GitHub repositories",
+    github: "https://github.com/santosh898/git-ranker",
+    underDevelopment: true,
+  },
+  {
+    title: "Linkbender",
+    description:
+      "A RAG Agent based application to chat over all the links you save from the web.",
+    github: "https://github.com/santosh898/linkbender",
+    demo: "https://linkbender.vercel.app/",
+    underDevelopment: true,
+  },
+  {
+    title: "UI OTG",
+    description:
+      "A Generative AI-based UI framework for real-time data interaction and dynamic component creation from user prompts",
+    explainer: "https://youtu.be/u7h6lMfTuzM",
+  },
+  {
+    title: "Typesafe Data Layer",
+    description:
+      "Fullstack type safety by utilising GraphQL as the single source of truth for types",
+    github: "https://github.com/santosh898/typesafe-graphql",
+    explainer: "https://youtu.be/0E5VtmZig90",
+  },
+  {
+    title: "GPT with Friends",
+    description:
+      "Browser Extension to chat with your friends over ChatGPT conversations",
+    explainer: "https://youtu.be/2RSKDraJoaI",
+  },
+  {
+    title: "The Light Project",
+    description: "Controlling Devices using Thingsboard and MicroPython",
+    github: "https://github.com/santosh898/thelightproject",
+    explainer: "https://youtu.be/PhOGF6qlicc",
+  },
+  {
+    title: "Side Notes",
+    description: "Browser Extension that displays notepad on ChatGPT's side",
+    extension:
+      "https://chromewebstore.google.com/detail/sidenotes/cigckffjdllglonilacoipobihdlgcld",
+  },
+];
+
 const Projects = () => {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          title: "UI OTG",
-          description:
-            "A Generative AI-based UI framework for real-time data interaction and dynamic component creation from user prompts",
-          explainer: "https://youtu.be/u7h6lMfTuzM",
-        },
-        {
-          title: "Kaise Ho?",
-          description: "A better way to know how your friends are doing",
-          demo: "https://kaise-ho.vercel.app",
-        },
-        {
-          title: "Typesafe Data Layer",
-          description:
-            "Fullstack type safety by utilising GraphQL as the single source of truth for types",
-          github: "https://github.com/santosh898/typesafe-graphql",
-          explainer: "https://youtu.be/0E5VtmZig90",
-        },
-        {
-          title: "GPT with Friends",
-          description:
-            "Browser Extension to chat with your friends over ChatGPT conversations",
-          explainer: "https://youtu.be/2RSKDraJoaI",
-        },
-        {
-          title: "The Light Project",
-          description: "Controlling Devices using Thingsboard and MicroPython",
-          github: "https://github.com/santosh898/thelightproject",
-          explainer: "https://youtu.be/PhOGF6qlicc",
-        },
-        {
-          title: "Side Notes",
-          description:
-            "Browser Extension that displays notepad on ChatGPT's side",
-          extension:
-            "https://chromewebstore.google.com/detail/sidenotes/cigckffjdllglonilacoipobihdlgcld",
-        },
-      ].map((project, index) => (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project, index) => (
         <Card
           key={index}
           className="bg-gray-900 border-gray-800 text-gray-100 flex flex-col"
         >
           <CardContent className="p-6 flex-1 relative">
-            <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
+            <div className="flex justify-start items-center gap-3 mb-2">
+              <h3 className="text-lg font-semibold">{project.title}</h3>
+              {project.underDevelopment && (
+                <span className="px-2 py-1 text-xs font-semibold bg-yellow-500 text-black rounded-full">
+                  Under Development
+                </span>
+              )}
+            </div>
             <p className="mb-4 text-sm text-gray-300">{project.description}</p>
             {project.github && (
               <Button
