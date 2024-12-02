@@ -5,6 +5,18 @@ import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "ArthBhumi",
+    description:
+      "Gen AI powered, Decentralized global p2p trade ecosystem with eBL & Commodity tokenization, trade financing and supply chain tracking.",
+    underDevelopment: true,
+  },
+  {
+    title: "Basics",
+    description:
+      "Basics DAO aimed at making essential resources accessible to homeless and under-served communities.",
+    underDevelopment: true,
+  },
+  {
     title: "Git Ranker",
     description:
       "An LLM Based tool to rates and provides issues on your GitHub repositories",
