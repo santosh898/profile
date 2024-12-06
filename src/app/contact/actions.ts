@@ -4,8 +4,20 @@ import { z } from "zod";
 import { redirect } from "next/navigation";
 import PocketBase from "pocketbase";
 import defaultsDeep from "lodash/defaultsDeep";
+import { MailtrapClient } from "mailtrap";
 
 const pb = new PocketBase("https://direction-trade.pockethost.io");
+
+const TOKEN = process.env.MAILTRAP_TOKEN!;
+
+const client = new MailtrapClient({
+  token: TOKEN,
+});
+
+const sender = {
+  email: "santosh@sted.space",
+  name: "Sai Santosh K",
+};
 
 const FormSchema = z
   .object({
@@ -58,6 +70,13 @@ export async function submitContactForm(
   }
 
   await pb.collection("contact_me_santosh").create(validatedFields.data);
+
+  await client.send({
+    from: sender,
+    to: [{ email: validatedFields.data.email }],
+    template_uuid: "2ee5c2b9-6279-419a-8b33-ffa6157f8934",
+    template_variables: { name: validatedFields.data.name },
+  });
 
   redirect("/contact/thank-you");
 }
