@@ -62,7 +62,7 @@ export default function Page() {
             out!
           </p>
           <Button asChild>
-            <Link href="mailto:me.sai.santosh@email.com">
+            <Link href="/contact">
               Contact Me <Mail className="ml-2 h-4 w-4" />
             </Link>
           </Button>
