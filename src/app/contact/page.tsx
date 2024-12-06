@@ -2,7 +2,7 @@
 
 import { useActionState } from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,7 +25,10 @@ const initialState = {
 };
 
 export default function ContactPage() {
-  const [state, formAction] = useActionState(submitContactForm, initialState);
+  const [state, formAction, isPending] = useActionState(
+    submitContactForm,
+    initialState
+  );
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
@@ -126,9 +129,9 @@ export default function ContactPage() {
               </>
             )}
           </div>
-
-          <Button type="submit" variant="secondary">
-            Send Message
+          <Button type="submit" disabled={isPending} variant="secondary">
+            {isPending && <Loader2 className="animate-spin" />}
+            {isPending ? "Sending your Message..." : "Send Message"}
           </Button>
         </form>
       </main>
