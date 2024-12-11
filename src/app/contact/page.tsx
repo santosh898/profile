@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContactForm } from "./actions";
+import { Separator } from "@/components/ui/separator";
 
 const initialState = {
   data: {
@@ -84,8 +85,11 @@ export default function ContactPage() {
               </>
             )}
           </div>
-
-          <div>
+          <div className="!mt-3 flex gap-2 items-center overflow-hidden">
+            <p>or</p>
+            <Separator />
+          </div>
+          <div className="!mt-3">
             <label htmlFor="email" className="block text-sm font-medium mb-2">
               Email
             </label>

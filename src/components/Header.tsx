@@ -73,7 +73,7 @@ const Header = () => {
           and AI. Skilled in developing efficient, scalable, and innovative
           solutions using cutting edge tech.
         </p>
-        <Button asChild variant="secondary" className="mt-4">
+        <Button asChild variant="outline" className="mt-4">
           <Link
             href="/Sai_Santosh_Kottakota_Resume.pdf"
             target="_blank"
