@@ -46,7 +46,7 @@ export default function Page() {
             Interested in collaborating or have a question? Feel free to reach
             out!
           </p>
-          <Button asChild>
+          <Button variant="secondary" asChild>
             <Link href="/contact">
               Contact Me <Mail className="ml-2 h-4 w-4" />
             </Link>

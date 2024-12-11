@@ -51,7 +51,7 @@ const Header = () => {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="text-white hover:text-gray-300"
+                      className="text-primary hover:text-primary-foreground"
                     >
                       <Icon className="h-5 w-5" />
                       <span className="sr-only">{label}</span>
