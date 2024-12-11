@@ -2,7 +2,7 @@ import { Card, CardContent } from "./ui/card";
 
 const Experience = () => {
   return (
-    <div className="space-y-6">
+    <div className="grid gap-4 max-sm:gap-3 grid-cols-2 max-sm:grid-cols-1 bg-card">
       {[
         {
           role: "Senior Software Engineer",
@@ -46,7 +46,7 @@ const Experience = () => {
           ],
         },
       ].map((job, index) => (
-        <Card key={index}>
+        <Card key={index} className="bg-background shadow-none rounded-none">
           <CardContent className="p-6">
             <h3 className="mb-1 text-lg font-semibold">{job.role}</h3>
             <p className="mb-2 text-sm">

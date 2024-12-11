@@ -66,9 +66,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 bg-card border-card">
       {projects.map((project, index) => (
-        <Card key={index} className="flex flex-col">
+        <Card
+          key={index}
+          className="flex flex-col bg-background rounded-none shadow-none"
+        >
           <CardContent className="p-6 flex-1 relative">
             <div className="flex justify-start items-center gap-3 mb-2">
               <h3 className="text-lg font-semibold">{project.title}</h3>
