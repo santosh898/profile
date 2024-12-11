@@ -68,20 +68,17 @@ const Projects = () => {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (
-        <Card
-          key={index}
-          className="bg-gray-900 border-gray-800 text-gray-100 flex flex-col"
-        >
+        <Card key={index} className="flex flex-col">
           <CardContent className="p-6 flex-1 relative">
             <div className="flex justify-start items-center gap-3 mb-2">
               <h3 className="text-lg font-semibold">{project.title}</h3>
               {project.underDevelopment && (
-                <span className="px-2 py-1 text-xs font-semibold bg-yellow-500 text-black rounded-full">
+                <span className="px-2 py-1 text-xs font-semibold bg-primary rounded-full">
                   Under Development
                 </span>
               )}
             </div>
-            <p className="mb-4 text-sm text-gray-300">{project.description}</p>
+            <p className="mb-4 text-sm">{project.description}</p>
             {project.github && (
               <Button
                 size="icon"

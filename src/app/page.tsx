@@ -17,30 +17,15 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen">
       <main className="container mx-auto px-6 py-12">
         <Header />
 
         <Tabs defaultValue="experience" className="mb-12">
-          <TabsList className="grid w-full grid-cols-3 bg-gray-900">
-            <TabsTrigger
-              value="experience"
-              className="data-[state=active]:bg-gray-800 data-[state=active]:text-white"
-            >
-              Experience
-            </TabsTrigger>
-            <TabsTrigger
-              value="projects"
-              className="data-[state=active]:bg-gray-800 data-[state=active]:text-white"
-            >
-              Projects
-            </TabsTrigger>
-            <TabsTrigger
-              value="skills"
-              className="data-[state=active]:bg-gray-800 data-[state=active]:text-white"
-            >
-              Skills
-            </TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="projects">Projects</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
           </TabsList>
           <TabsContent value="experience" className="mt-6">
             <Experience />
@@ -57,7 +42,7 @@ export default function Page() {
           <h2 className="mb-4 text-2xl font-semibold tracking-tight">
             Get in Touch
           </h2>
-          <p className="mb-6 max-w-2xl text-gray-300">
+          <p className="mb-6 max-w-2xl">
             Interested in collaborating or have a question? Feel free to reach
             out!
           </p>

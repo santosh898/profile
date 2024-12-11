@@ -68,7 +68,7 @@ const Header = () => {
       </header>
 
       <section className="mb-12 max-sm:text-center">
-        <p className="max-w-2xl text-gray-300">
+        <p className="max-w-2xl">
           Experienced Tech Lead with expertise in modern web technologies, Web3,
           and AI. Skilled in developing efficient, scalable, and innovative
           solutions using cutting edge tech.

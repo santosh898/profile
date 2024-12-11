@@ -31,11 +31,11 @@ export default function ContactPage() {
   );
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <main className="flex-grow container mx-auto px-6 py-12">
         <Link href="/" className="inline-block mb-8">
           <Button variant="ghost">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Portfolio
+            <ArrowLeft className="h-4 w-4" /> Back to Portfolio
           </Button>
         </Link>
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
               name="name"
               required
               defaultValue={state.data.name}
-              className="bg-gray-900 border-gray-700 text-white"
+              className="bg-card"
             />
             {state.errors?.name && (
               <>
@@ -72,7 +72,7 @@ export default function ContactPage() {
               id="phone"
               name="phone"
               defaultValue={state.data.phone}
-              className="bg-gray-900 border-gray-700 text-white"
+              className="bg-card"
             />
             {state.errors?.phone && (
               <>
@@ -94,7 +94,7 @@ export default function ContactPage() {
               name="email"
               type="email"
               defaultValue={state.data.email}
-              className="bg-gray-900 border-gray-700 text-white"
+              className="bg-card"
             />
             {state.errors?.email && (
               <>
@@ -116,7 +116,7 @@ export default function ContactPage() {
               name="message"
               required
               defaultValue={state.data.message}
-              className="bg-gray-900 border-gray-700 text-white"
+              className="bg-card"
               rows={5}
             />
             {state.errors?.message && (

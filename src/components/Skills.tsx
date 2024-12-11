@@ -107,25 +107,18 @@ function SkillSection({
 
   return (
     <div className="flex-1 min-w-[250px]">
-      <h3 className="text-xl font-semibold mb-4 text-gray-100">{title}</h3>
+      <h3 className="text-xl font-semibold mb-4">{title}</h3>
       <div className="space-y-2">
         {displayedSkills.map((skill) => (
-          <Card
-            key={skill.name}
-            className="bg-gray-900 border-gray-800 text-gray-100"
-          >
+          <Card key={skill.name}>
             <CardContent className="flex items-center gap-3 p-3">
-              <skill.logo className="h-8 w-8 mr-2 fill-current text-white" />
+              <skill.logo className="h-8 w-8 mr-2 fill-current" />
               <span className="text-base font-medium">{skill.name}</span>
             </CardContent>
           </Card>
         ))}
         {showToggle && (
-          <Button
-            variant="ghost"
-            className="w-full mt-2 text-gray-400"
-            onClick={onToggle}
-          >
+          <Button variant="ghost" className="w-full mt-2" onClick={onToggle}>
             {expanded ? (
               <span className="flex items-center">
                 Show Less <ChevronUp className="ml-2 h-4 w-4" />

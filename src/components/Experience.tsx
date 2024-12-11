@@ -46,13 +46,13 @@ const Experience = () => {
           ],
         },
       ].map((job, index) => (
-        <Card key={index} className="bg-gray-900 border-gray-800 text-gray-100">
+        <Card key={index}>
           <CardContent className="p-6">
             <h3 className="mb-1 text-lg font-semibold">{job.role}</h3>
-            <p className="mb-2 text-sm text-gray-300">
+            <p className="mb-2 text-sm">
               {job.company} | {job.period}
             </p>
-            <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+            <ul className="list-disc pl-5 text-sm space-y-1">
               {job.responsibilities.map((resp, idx) => (
                 <li key={idx}>{resp}</li>
               ))}

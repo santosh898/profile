@@ -6,31 +6,31 @@
         }
 
         .st1 {
-            fill: #Fff;
+            fill: #333;
         }
 
         .st2 {
-            fill: #eff;
+            fill: #444;
         }
 
         .st3 {
-            fill: #fff;
+            fill: #555;
         }
 
         .st4 {
-            fill: #2F343B;
+            fill: #666;
         }
 
         .st5 {
-            fill: #Cff;
+            fill: #777;
         }
 
         .st6 {
-            fill: #Cff;
+            fill: #888;
         }
 
         .st7 {
-            fill: #7ff;
+            fill: #999;
         }
     </style>
     <g id="bg_x28_do_not_export_x29_" class="st0">
