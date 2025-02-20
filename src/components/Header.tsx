@@ -32,7 +32,7 @@ const Header = () => {
               {
                 icon: Mail,
                 label: "Email",
-                href: "mailto:me.sai.santosh@email.com",
+                href: "mailto:me.sai.santosh@gmail.com",
               },
               {
                 icon: Github,
