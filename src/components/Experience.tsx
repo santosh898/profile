@@ -9,8 +9,8 @@ const Experience = () => {
           company: "Sails software Solutions, Visakhapatnam",
           period: "08/2022 - Present",
           responsibilities: [
-            "Architected and developed ElasticSearch and React.JS Powered search component with extensive filtering and export functionalities",
-            "Architected, developed and deployed Angular frontend for a large enterprise",
+            "Leading the phased migration of a biotech product from WPF to a web-based system with an async communication layer",
+            "Architecting a scalable multi-library frontend with modular business logic and reusable components",
             "Spearheading a full UI revamp for a medical scanning equipment, handling complex graphical data",
           ],
         },
