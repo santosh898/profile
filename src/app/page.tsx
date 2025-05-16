@@ -47,7 +47,7 @@ export default function Page() {
             out!
           </p>
           <Button variant="secondary" asChild>
-            <Link href="/contact">
+            <Link href="mailto:me.sai.santosh@gmail.com">
               Contact Me <Mail className="ml-2 h-4 w-4" />
             </Link>
           </Button>

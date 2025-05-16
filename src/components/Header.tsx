@@ -77,7 +77,6 @@ const Header = () => {
           <Link
             href="/Sai_Santosh_Kottakota_Resume.pdf"
             target="_blank"
-            download
           >
             <Download className="h-4 w-4 mr-2" />
             Resume
